@@ -3,20 +3,20 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class UserRegisterationTest {
 
-        //Test cases to check and validate the last name must be "True"
+        //Test cases to check and validate the Email must be "True"
 
         @Test
-        public void givenFirstName_WhenProper_ShouldReturnTrue() {
+        public void givenEmail_WhenProper_ShouldReturnTrue() {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result= userRegistration.validLastName();
+            boolean result= userRegistration.validEmail();
             Assertions.assertTrue(result);
         }
 
-        //Test cases to check and validate the last name must be "False"
+        //Test cases to check and validate the Email must be "False"
         @Test
-        public void givenFirstName_WhenProper_ShouldReturnFalse() {
+        public void givenEmail_WhenProper_ShouldReturnFalse() {
             UserRegistration userRegistration=new UserRegistration();
-            boolean result= userRegistration.validLastName();
+            boolean result= userRegistration.validEmail();
             Assertions.assertFalse(result);
         }
 }
