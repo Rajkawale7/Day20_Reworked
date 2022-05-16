@@ -5,17 +5,20 @@ import java.util.regex.Pattern;
 public class UserRegistration {
     public static final Scanner scanner = new Scanner(System.in);
 
-    public static boolean validMobileNumber() {
-        System.out.print("Enter your mobile number : ");
-        String phoneNo = scanner.nextLine();
-        String regex4 = "^[0-9]{2}\\s{0,1}[0-9]{10}$";
-        Pattern p4 = Pattern.compile(regex4);
-        Matcher m4 = p4.matcher(phoneNo);
-        boolean r4 = m4.matches();
-        if (r4)
-            System.out.println("Phone number is Valid");
+    public static boolean validPassword() {
+        System.out.print("Enter your Password : ");
+        String Password = scanner.nextLine();
+        String regex5 = "^(?=.*[0-9])"
+                + "(?=.*[a-z])(?=.*[A-Z])"
+                + "(?=.*[@#$%^&+=])"
+                + "(?=\\S+$).{8,20}$";
+        Pattern p5 = Pattern.compile(regex5);
+        Matcher m5 = p5.matcher(Password);
+        boolean r5 = m5.matches();
+        if (r5)
+            System.out.println("Password is Valid");
         else
-            System.out.println("Phone number is Invalid");
-        return r4;
+            System.out.println("Password is Invalid");
+        return r5;
     }
 }
